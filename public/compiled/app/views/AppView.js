@@ -24,7 +24,7 @@
     AppView.prototype.loginTemplate = '<div class="loginpage"> </div>';
 
     AppView.prototype.recommendationTemplate =
-      '<div class="container-fluid"> <div class="row"> <div id="sidebar" class="col-6 col-lg-4"> sidebar testing </div> <div id="main" class="col-6 col-lg-8"> body testing </div> </div> <div class="rlink" id="powered"><a href="https://github.com/guymorita/recommendationRaccoon" target="_blank">Powered by recommendationRaccoon (Node.js Module)</a></div> </div>';
+      '<div class="container-fluid"> <div class="row"> <div id="sidebar"> sidebar testing </div> <div id="main"> body testing </div> </div> <div class="rlink" id="powered"><a href="https://github.com/guymorita/recommendationRaccoon" target="_blank">Powered by recommendationRaccoon (Node.js Module)</a></div> </div>';
 
     AppView.prototype.initialize = function () {
       this.render();

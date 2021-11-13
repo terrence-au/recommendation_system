@@ -165,7 +165,8 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 13px;
   line-height: 1.7em;
-  background: #2e2e2e;
+  /* background: #2e2e2e; */
+  background-color: #ffffff;
   color: #fff;
 }
 

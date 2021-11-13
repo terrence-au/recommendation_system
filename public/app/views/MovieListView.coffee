@@ -38,7 +38,7 @@ class window.MovieListView extends Backbone.View
     @$el.append @template
     for index, movie of _.shuffle(@model.userObj.allMovies)
       @$('.table').append '<tr id="'+movie.id+'"><td>
-        '+movie.name+'</td>
+        '+movie.name+'<div style="width: 1000px; height: 700px; background-size: cover;background-repeat: no-repeat;background-position: center center;" class="'+movie.name.replace(/\s/g, "").toLowerCase()+'"></div></td>
         <td>
         <button type="button" class="liked btn btn-success btn-xs" id="'+movie.id+'"><i class="icon-thumbs-up"></i></button>
         <button type="button" class="disliked btn btn-danger btn-xs" id="'+movie.id+'"><i class="icon-thumbs-down"></i></button>

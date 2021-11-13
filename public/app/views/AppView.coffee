@@ -7,11 +7,11 @@ class window.AppView extends Backbone.View
   recommendationTemplate:
     '<div class="container-fluid">
       <div class="row">
-        <div id="sidebar" class="col-6 col-lg-4">
+        <div id="sidebar">
           sidebar
           testing
         </div>
-        <div id="main" class="col-6 col-lg-8">
+        <div id="main">
         body
         testing
         </div>

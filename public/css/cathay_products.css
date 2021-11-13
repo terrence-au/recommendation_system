@@ -1,0 +1,74 @@
+.product {
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  padding: 40px 0px;
+  margin-bottom: 56px;
+}
+
+.product__imgwrapper {
+  overflow: hidden;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.product__img {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 300px;
+  height: 300px;
+}
+
+.product__name {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 150%;
+  color: #494949;
+}
+
+.product__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product__buttons button {
+  appearance: none;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  border: none;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 50%;
+  font-size: 18px;
+  margin-bottom: 56px;
+}
+
+.product__buttons .liked {
+  color: #fa8181;
+  margin-right: 80px;
+}
+
+.product__buttons .disliked {
+  color: #494949;
+}
+
+.product-wrapper .notseen {
+  appearance: none;
+  border: none;
+  background: none;
+  font-size: 14px;
+  color: #7f7f7f;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

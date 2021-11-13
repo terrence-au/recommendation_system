@@ -7,13 +7,14 @@
     "url": "https://github.com/guymorita/recommendationRaccoon.git"
   },
   "scripts": {
-    "start": "node-server.js"
+    "start": "nodemon node-server.js"
   },
   "dependencies": {
     "async": ">= 0.1.22",
     "csv": "0.3.x",
     "express": "3.x.x",
     "jsonfile": "^6.1.0",
+    "nodemon": "^2.0.15",
     "pg": "^6.1.2",
     "pg-hstore": "^2.3.2",
     "raccoon": "0.2.5",
