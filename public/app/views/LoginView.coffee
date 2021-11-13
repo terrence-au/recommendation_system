@@ -4,7 +4,7 @@ class window.LoginView extends Backbone.View
     '<div class="row" style="margin-top:100px;">
       <div class="col-lg-4"></div>
       <div class="col-lg-4">
-        <h1 class="coverheader">Mosaic Films</h1>
+        <h1 class="coverheader">Item Lists</h1>
         <blockquote style="font-size: 1.5em;"><em>instant</em> movie recommendations from people like you!</blockquote>
         <h1></h1>
         <div class="well">

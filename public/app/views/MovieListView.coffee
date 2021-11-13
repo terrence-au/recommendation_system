@@ -2,7 +2,7 @@ class window.MovieListView extends Backbone.View
 
   template:
     '<div>
-    <h2>Mosaic Films</h2>
+    <h2>Item Lists</h2>
     <div class="scrollBox">
     <tbody>
       <table class="table">
