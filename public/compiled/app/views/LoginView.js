@@ -21,32 +21,39 @@
       return LoginView.__super__.constructor.apply(this, arguments);
     }
 
-    LoginView.prototype.template =
-      '<div class="row" style="margin-top:100px;"> <div class="col-lg-4"></div> <div class="col-lg-4"> <h1 class="coverheader">Item Lists</h1> <blockquote style="font-size: 1.5em;"><em>instant</em> movie recommendations from people like you!</blockquote> <h1></h1> <div class="well"> <div class="input-group"> <input type="text" class="form-control" placeholder="enter a new or existing username"> <span class="input-group-btn"> <button id="submitButton" class="btn btn-default" type="button">Go</button> </a> </span> </div> </div> <div class="col-lg-4"></div> </div> </div> <div class="row" style="margin-top:50px;"> <div class="col-lg-2"></div> <div class="col-lg-8"> <div class="row"> <div class="col-lg-3"> <div class="coversprites fimage cover1"> <div class="coverlayer"> <p class="covertext ct1"> <i class="icon-edit"></i> Enter a Username </p> </div> </div> </div> <div class="col-lg-3"> <div class="coversprites fimage cover2"> <div class="coverlayer"> <p class="covertext ct2"> <i class="icon-check-sign"></i> Rate some movies! </p> </div> </div> </div> <div class="col-lg-3"> <div class="coversprites fimage cover4"> <div class="coverlayer"> <p class="covertext ct3"> <i class="icon-group"></i> See similar users </p> </div> </div> </div> <div class="col-lg-3"> <div class="coversprites fimage cover3"> <div class="coverlayer"> <p class="covertext ct4"> <i class="icon-film"></i> Get movie recommendations from similar users </p> </div> </div> </div> </div> </div> <div class="col-lg-2"></div> </div>';
+    LoginView.prototype.template = '<div id="load"></div>';
 
     LoginView.prototype.initialize = function () {
-      this.render();
-      return $(document).ready(function () {
-        var mosimg;
-        mosimg = new Image();
-        return (mosimg.src = "/img/moviecollage2.png");
+      this.username = "a";
+      _(this.model).extend({
+        name: this.username,
+      });
+      return this.model.fetch({
+        error: (function (_this) {
+          return function (model, response) {
+            return console.log("model", model);
+          };
+        })(this),
+        success: (function (_this) {
+          return function (model, response) {
+            return _this.userInfoReceived(response);
+          };
+        })(this),
       });
     };
 
     LoginView.prototype.events = {
-      "click #submitButton": "getUser",
-      "keyup :input": "checkEnter",
+      "load #load": "checkEnter",
     };
 
     LoginView.prototype.checkEnter = function (e) {
-      console.log(e);
-      if (e.which === 13) {
-        return this.getUser();
-      }
+      console.log("e");
+
+      return this.getUser();
     };
 
     LoginView.prototype.getUser = function () {
-      this.username = this.$("input").val();
+      this.username = "a";
       _(this.model).extend({
         name: this.username,
       });
