@@ -19,7 +19,7 @@ app.get("/newRating", function (req, res) {
     req.query.movie.like === "liked" ? raccoon.liked : raccoon.disliked;
 
   raccoonFeeling(req.query[":userId"], req.query.movie.id).then(() => {
-    raccoon.stat.recommendFor(req.query[":userId"], 4).then((recs) => {
+    raccoon.stat.recommendFor(req.query[":userId"], 2).then((recs) => {
       console.log("recs", recs);
       raccoon.stat.mostSimilarUsers(req.query[":userId"]).then((simUsers) => {
         raccoon.stat.bestRatedWithScores(9).then((bestRated) => {
