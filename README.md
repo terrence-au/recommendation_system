@@ -59,7 +59,7 @@ createdb mosaic
 
 #### 4. Import Sample Data
 ``` bash
-node lib/importMovies.js
+node lib/importItems.js
 ```
 
 #### 3. Boot up servers in separate terminal windows

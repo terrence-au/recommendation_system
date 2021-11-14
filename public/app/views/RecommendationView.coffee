@@ -79,7 +79,7 @@ class window.RecommendationView extends Backbone.View
 
   handleFirstRating: ->
     @initialRender()
-    @$('.loading').hide('slow')
+    @$('.loading').hide('fast')
     setTimeout( ->
       @$('.tip').tooltip('hide')
       @$('.tip2').tooltip({placement: 'bottom'}).tooltip('show')

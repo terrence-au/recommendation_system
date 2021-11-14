@@ -1,3 +1,13 @@
+.products-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #494949;
+}
+
+.product-wrapper {
+  margin-bottom: 64px;
+}
+
 .product {
   overflow: hidden;
   border-radius: 4px;

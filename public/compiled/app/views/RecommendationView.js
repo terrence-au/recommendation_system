@@ -21,16 +21,18 @@
       return RecommendationView.__super__.constructor.apply(this, arguments);
     }
 
-    RecommendationView.prototype.template =
-      '<div> <a class="tip" data-toggle="tooltip" data-placement="left" title="Rate some movies and we&#39;ll provide you with recommendations from similar users!"> </a> <div class="row"> <div class="col-lg-6"> <h2>Your Recommendations <a class="tip2" data-toggle="tooltip" data-placement="left" title="Here are your recommendations! They change after every new rating based on what similar users like and dislike."> <i class="icon-info-sign smallicon"></i> </a> </h2> </div> <div id="userBox" class="col-lg-5"> </div> <div class="col-lg-1"> </div> </div> <div id="container"> </div> </div>';
+    RecommendationView.prototype.template = `<div class="recommendations">
+        <h2 class="recommendation__title">Recommendation for you</h2> 
+       <div id="container" class="recommendation__row"></div></div>`;
 
     //RecommendationView.prototype.topUsersTemplate = '<div class="topUsers"> </div>';
 
     RecommendationView.prototype.topRatedTemplate =
       '<div class="topRated"> </div>';
 
-    RecommendationView.prototype.loadingTemplate =
-      '<div class="loading"> <i class="icon-spinner icon-spin icon-large"></i> please enter more ratings... </div>';
+    RecommendationView.prototype.loadingTemplate = `<div class="loading" style="color: black">        
+        <span class="recommendation-loading-text">We hope to know more about you before recommmending. </span>
+      </div>`;
 
     RecommendationView.prototype.initialize = function () {
       setTimeout(function () {
@@ -88,7 +90,7 @@
 
     RecommendationView.prototype.handleFirstRating = function () {
       this.initialRender();
-      this.$(".loading").hide("slow");
+      this.$(".loading").hide("fast");
       setTimeout(function () {
         this.$(".tip").tooltip("hide");
         return this.$(".tip2")
@@ -126,15 +128,21 @@
       for (index in moviesToAdd) {
         movieid = moviesToAdd[index];
         newMovie = $(
-          '<div id="' +
-            movieid +
-            '" class="element sprites ' +
-            this.model.userObj.movieLookup[movieid]
-              .replace(/\s+/g, "")
-              .toLowerCase() +
-            '">' +
-            this.model.userObj.movieLookup[movieid] +
-            "</div>"
+          `<div id="${movieid}" class="element sprites recommendation">
+            <div class="recommendation__imgwrapper">
+              <div class="recommendation__img ${this.model.userObj.movieLookup[
+                movieid
+              ]
+                .replace(/\s+/g, "")
+                .toLowerCase()}">
+              </div>
+            </div>
+              <span class="recommendation__name">${
+                this.model.userObj.movieLookup[movieid]
+              }</span>
+            </div>
+            </div>
+              `
         );
         this.$("#container").isotope("insert", newMovie);
       }

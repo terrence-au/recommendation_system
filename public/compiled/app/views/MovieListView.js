@@ -22,7 +22,7 @@
     }
 
     MovieListView.prototype.template = `<div> 
-        <h2>Item Lists</h2> 
+        <h2 class="products-title">Do you like this ...</h2> 
           <div class="container products">
         </div>        
       </div>`;
@@ -69,16 +69,16 @@
                 <div class="product__name">${movie.name}</div>
               </div>
                 <div class="product__buttons">
-                  <button type="button" class="liked" id="${
+                  <button type="button" class="liked btn " id="${
                     movie.id
                   }">                  
                     <i class="fas fa-heart"></i>
                   </button>
-                  <button type="button" class="disliked" id="${movie.id}">
+                  <button type="button" class="disliked btn" id="${movie.id}">
                     <i class="fas fa-heart-broken"></i>
                   </button>
                 </div>
-                <button type="button" class="notseen" id="${movie.id}">
+                <button type="button" class="notseen btn" id="${movie.id}">
                   <span>skip this</span>
                 </button>              
             </div>

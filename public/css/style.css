@@ -1,7 +1,7 @@
 /* Start: Recommended Isotope styles */
 
 #container {
-  width: 800px;
+  width: 100%;
   height: 480px;
 }
 
@@ -257,9 +257,9 @@ body {
 }
 
 #container {
-  border: 1px solid #666;
+  /* border: 1px solid #666;
   padding: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 20px; */
 }
 
 #similarity,
@@ -270,9 +270,9 @@ body {
 }
 
 #toprated {
-  border: 1px solid #666;
+  /* border: 1px solid #666;
   padding: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 20px; */
 }
 
 .scrollBox {
@@ -354,7 +354,7 @@ h1.coverheader {
 }
 
 .element {
-  width: 110px;
+  /* width: 110px;
   height: 110px;
   margin: 5px;
   float: left;
@@ -362,10 +362,9 @@ h1.coverheader {
   position: relative;
   background: #888;
   color: white;
-  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.5);
   -webkit-border-top-right-radius: 1.2em;
   -moz-border-radius-topright: 1.2em;
-  border-top-right-radius: 1.2em;
+  border-top-right-radius: 1.2em; */
 }
 
 .element.alkali {
@@ -422,8 +421,8 @@ h1.coverheader {
 .element.user {
 }
 .element * {
-  position: absolute;
-  margin: 0;
+  /* position: absolute;
+  margin: 0; */
 }
 
 .element .symbol {
