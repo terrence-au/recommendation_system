@@ -1,3 +1,7 @@
+# Cathay Hackathon - Recommendation System
+
+This is a recommendation system fully built on recommendationRaccoon Engine and majorly referenced from the recommendationRaccoon Demo App
+
 ## Dependencies
 
 * Async
@@ -14,17 +18,21 @@
 
 * <a href="https://github.com/guymorita/recommendationRaccoon" target="_blank">https://github.com/guymorita/recommendationRaccoon</a>
 
+## recommendationRaccoon Demo App
+
+* <a href="https://github.com/guymorita/Mosaic-Films---Recommendation-Engine-Demo" target="_blank">https://github.com/guymorita/Mosaic-Films---Recommendation-Engine-Demo</a>
+
 ## How to install locally
 
 #### 1. Clone the repo
 ``` bash
-git clone https://github.com/terrence-au/recommendation_system.git
+git clone https://github.com/guymorita/Mosaic-Films---Recommendation-Engine-Demo.git
 ```
 
 #### 2. Install dependencies
 Navigate to folder
 ``` bash
-cd recommendation_system
+cd Mosaic-Films---Recommendation-Engine-Demo
 ```
 ``` bash
 npm install
