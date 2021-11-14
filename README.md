@@ -26,13 +26,13 @@ This is a recommendation system fully built on recommendationRaccoon Engine and 
 
 #### 1. Clone the repo
 ``` bash
-git clone https://github.com/guymorita/Mosaic-Films---Recommendation-Engine-Demo.git
+git clone https://github.com/terrence-au/recommendation_system.git
 ```
 
 #### 2. Install dependencies
 Navigate to folder
 ``` bash
-cd Mosaic-Films---Recommendation-Engine-Demo
+cd recommendation_system
 ```
 ``` bash
 npm install
